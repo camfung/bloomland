@@ -22,6 +22,9 @@ export default function TrafficPortal() {
 						<span className="ml-2 text-sm font-normal text-slate-400 hidden sm:inline">A single tool with unlimited options</span>
 					</div>
 					<nav className="hidden gap-6 text-sm font-medium sm:flex">
+						<Link to="/dashboard" className="text-slate-600 hover:underline">
+							Dashboard
+						</Link>
 						<Link to="/auth" className="text-sky-700 hover:underline">
 							Register
 						</Link>
