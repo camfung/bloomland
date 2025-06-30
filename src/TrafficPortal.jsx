@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function TrafficPortal() {
 	const [alias, setAlias] = useState("w2");
@@ -21,12 +22,12 @@ export default function TrafficPortal() {
 						<span className="ml-2 text-sm font-normal text-slate-400 hidden sm:inline">A single tool with unlimited options</span>
 					</div>
 					<nav className="hidden gap-6 text-sm font-medium sm:flex">
-						<a href="#" className="text-sky-700 hover:underline">
+						<Link to="/auth" className="text-sky-700 hover:underline">
 							Register
-						</a>
-						<a href="#" className="text-slate-600 hover:underline">
+						</Link>
+						<Link to="/auth" className="text-slate-600 hover:underline">
 							Login
-						</a>
+						</Link>
 					</nav>
 				</div>
 			</header>
@@ -77,18 +78,18 @@ export default function TrafficPortal() {
 
 				{/* Call‑to‑auth */}
 				<div className="flex items-center gap-4">
-					<button className="flex items-center gap-2 rounded bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-700">
+					<Link to="/auth" className="flex items-center gap-2 rounded bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-700 transition-colors">
 						<svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
 							<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 14.59L16.59 13l1.42 1.42L13 19.42 6.99 13.41 8.4 12l4.6 4.59V6h2v10.59Z" />
 						</svg>
 						Register
-					</button>
-					<button className="flex items-center gap-2 rounded bg-slate-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-slate-700">
+					</Link>
+					<Link to="/auth" className="flex items-center gap-2 rounded bg-slate-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-slate-700 transition-colors">
 						<svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
 							<path d="M10 17v-6h4v6h5v-8h3L12 3 2 9h3v8z" />
 						</svg>
 						Login
-					</button>
+					</Link>
 				</div>
 			</section>
 
